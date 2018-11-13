@@ -45,9 +45,6 @@ public class CollectorsDemo
         Map<Dish.Type, Optional<Dish>> result =  menu.stream().collect(Collectors.groupingBy(Dish::getType, Collectors.maxBy(Comparator.comparing(Dish::getCalories))));
         Map<Dish.Type, Dish> result2 =  menu.stream().collect(Collectors.groupingBy(Dish::getType, Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparing(Dish::getCalories)), Optional::get)));
 
-        Collectors::ma
-
-
         System.out.println(groupResult1);
     }
 }
